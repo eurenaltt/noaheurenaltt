@@ -1,0 +1,23 @@
+/* Estilo para a tag img */
+img {
+    max-width: 100%; /* Limita a largura da imagem ao tamanho do contêiner pai */
+    height: auto; /* Mantém a proporção original da imagem */
+    display: block; /* Remove margens verticais extras */
+    margin: 0 auto; /* Centraliza horizontalmente a imagem */
+}
+/* Estilos CSS para os botões */
+.button {
+    display: inline-block;
+    padding: 5px 10px; /* Reduza o preenchimento interno para tornar o botão menor */
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px; /* Reduza o tamanho da fonte */
+}
+
+.button:hover {
+    background-color: #0056b3;
+}

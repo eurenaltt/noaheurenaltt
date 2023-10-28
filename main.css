@@ -1,0 +1,83 @@
+/* Estilos gerais */
+body {
+    font-family: monospace;
+}
+
+ul li {
+    list-style: circle;
+}
+
+.list {
+    list-style: square;
+}
+
+#msg {
+    font-family: monospace;
+}
+
+/* Estilos para todos os elementos */
+* {
+    color: var(--fontColor);
+    font-family: helvetica;
+}
+
+/* Tema claro (light-theme) */
+.light-theme {
+    color: #000000;
+    background: #00FF00;
+
+    --bg: var(--green);
+    --fontColor: var(--black);
+    --buttonBg: var(--black);
+    --buttonFontColor: var(--white);
+}
+
+/* Tema escuro (dark-theme) */
+.dark-theme {
+    --bg: var(--black);
+    --fontColor: var(--green);
+    --buttonBg: var(--white);
+    --buttonFontColor: var(--black);
+
+    color: #FFFFFF; /* Cor do texto em fundo escuro */
+    background: #333333; /* Cor de fundo escura */
+
+    /* Defina outras propriedades de estilo do tema escuro aqui, se necessário */
+}
+
+/* Estilos para botões */
+.button {
+    position: absolute;
+    top: 20px;
+    left: 250px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    color: var(--buttonFontColor);
+    background-color: var(--buttonBg);
+    cursor: pointer; /* Transforma o cursor em uma mão quando passa sobre o botão */
+    transition: background-color 0.3s ease; /* Efeito de transição suave na mudança de cor de fundo */
+}
+
+.button:focus {
+    outline: none; /* Remove a borda de foco padrão */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8); /* Adiciona uma sombra quando o botão está em foco */
+}
+
+/* Estilos para o botão quando o tema escuro estiver ativo */
+.dark-theme .button {
+    background-color: #007bff; /* Cor de fundo do botão no tema escuro */
+}
+
+/* Estilos para o contêiner do botão */
+.button-container {
+    display: inline-block; /* Para que o contêiner se ajuste ao tamanho do botão */
+    border-radius: 10px; /* Borda arredondada */
+    background-color: #333; /* Cor de fundo do retângulo */
+    padding: 10px; /* Espaçamento interno */
+}
+
+/* Seletor para um elemento específico */
+.seu-elemento {
+    opacity: 0.8; /* Opacidade de 20% */
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Notícias de Terremotos</title>
+    <style>
+        /* Estilos CSS aqui */
+        /* Estilos CSS específicos para esta página, se necessário */
+        .button {
+            display: inline-block;
+            padding: 10px 20px; /* Reduza o preenchimento interno para tornar o botão menor */
+            background-color: #007BFF;
+            color: #fff;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px; /* Reduza o tamanho da fonte */
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Estilos para a seção de compartilhamento */
+        .share-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .share-button {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notícias de Terremotos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Página Inicial</a></li>
+                <li><a href="terremoto_caribe.html">Terremoto no Caribe 2020</a></li>
+                <li><a href="terremoto_turquia.html">Terremoto na Turquia 2020</a></li>
+                <li><a href="terremoto_japao.html">Terremoto no japao 2011</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <article>
+            <h2>Terremoto no Caribe 2020</h2>
+            <p>Data: 15 de Janeiro de 2020</p>
+            <p>Localização: Região do Caribe</p>
+            <p>Descrição: Um terremoto de magnitude 7.0 atingiu a região do Caribe, causando danos significativos.</p>
+            <a href="terremoto_caribe.html" class="button">Leia mais</a>
+        </article>
+
+        <article>
+            <h2>Terremoto na Turquia 2020</h2>
+            <p>Data: 24 de Outubro de 2020</p>
+            <p>Localização: Turquia</p>
+            <p>Descrição: Um terremoto de magnitude 6.6 atingiu a Turquia, causando destruição em várias cidades.</p>
+            <a href="terremoto_turquia.html" class="button">Leia mais</a>
+        </article>
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Notícias de Terremotos</p>
+    </footer>
+
+    <!-- Seção de compartilhamento -->
+    <div class="share-section">
+        <h3>Compartilhe esta página:</h3>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=URL_DO_SEU_SITE" target="_blank" class="share-button">
+            <img src="facebook.png" alt="Compartilhar no Facebook" width="35" height="35">
+        </a>
+        <a href="https://twitter.com/intent/tweet?url=URL_DO_SEU_SITE" target="_blank" class="share-button">
+            <img src="twitter.png" alt="Compartilhar no Twitter" width="30" height="30">
+        </a>
+        <button id="copyLinkButton" class="share-button">Copiar Link do Site</button>
+    </div>
+
+    <script>
+        document.getElementById("copyLinkButton").addEventListener("click", function() {
+            const linkToCopy = window.location.href; // Obtém a URL atual da página
+            const tempInput = document.createElement("input");
+            tempInput.value = linkToCopy;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            alert("Link do site copiado para a área de transferência!");
+        });
+    </script>
+</body>
+</html>
